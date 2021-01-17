@@ -2,3 +2,4 @@
 node_modules
 mongodb
 mongodb-data
+public/uploads

@@ -8,6 +8,7 @@ const app = express()
 // Including Routes
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 // Setting And Using View Engine
 app.set('view engine', 'ejs')
@@ -32,6 +33,7 @@ db.once('open', () => console.error('Connected to mongoose'))
 // Triggering The Routes
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
+app.use('/books', bookRouter)
 
 // Triggering The Server 
 app.listen(process.env.PORT || 3000)
